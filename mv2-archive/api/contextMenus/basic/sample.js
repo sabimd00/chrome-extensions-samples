@@ -7,6 +7,14 @@ function genericOnClick(info, tab) {
   console.log("item " + info.menuItemId + " was clicked");
   console.log("info: " + JSON.stringify(info));
   console.log("tab: " + JSON.stringify(tab));
+    
+
+    var src = JSON.stringify(info.selectionText);
+
+    src = src.replaceAll("[","{");
+        src = src.replaceAll("]","}");
+
+        alert(src);
 }
 
 // Create one test item for each context type.
